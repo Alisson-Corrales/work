@@ -1,0 +1,23 @@
+html{
+    background-color: darksalmon;
+}
+
+#field{
+    width: 90vh;
+    height: 50vh;
+    border:cornsilk 10px solid;
+    background-color: greenyellow;
+    position: relative;
+    overflow: hidden;
+    cursor: url(cleat.png), pointer;
+    margin: auto;
+}
+
+#ball{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    transition: all .5s;
+}

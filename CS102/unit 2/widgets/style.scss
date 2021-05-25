@@ -1,0 +1,160 @@
+body{
+    font-family: sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+
+    &::before{
+        content: "";
+        position: fixed;
+        background: #040404 top right no-repeat; //can place image if you want :>
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1
+    }
+}
+
+$primary-color: rgb(250, 230, 115);
+$secondary-color: rgb(73, 32, 14);
+
+a{
+    color: $primary-color;
+    text-decoration: none;
+    transition: 1s;
+    &:hover{
+        color:$secondary-color;
+        text-decoration: underline;
+    }
+}
+
+
+//landing page
+#Landing{
+    width: 100%;
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/3310691/pexels-photo-3310691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) top right;
+    background-size: cover;
+    position: relative;
+
+    &::before{
+        content: "";
+        background: rgba(0,0,0, 0.50);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .landing-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    h1{
+        margin: 0 0 10px 0;
+        font-size: 64px;
+        font-family: fantasy;
+        color: #fff;
+    }
+    h2{
+        color: #eee;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+.btn-scroll{
+    transition: .5s;
+    color: $primary-color;
+    
+    I{
+        font-size: 48px;
+    }
+
+    &:hover{
+        color: $secondary-color;
+    }
+}
+
+
+//skills
+
+.skills{
+    .progress{
+        height: 60%;
+        display: block;
+        background: none;
+        border-radius: 0;
+
+        .skill{
+            padding: 10px 0;
+            margin: 0;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: #fff;
+        }
+        .val{
+            float: right;
+            font-style: normal;
+        }
+    }
+    .progress-bar-wrap{
+        background: $secondary-color;
+    }
+    .progress-bar{
+        height:10px;
+        background: linear-gradient(to right, $primary-color, rgb(255, 172, 65), orange);
+    }
+}
+
+//resume
+.resume{
+    .resume-title{
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .resume-item{
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid $primary-color;
+        position: relative;
+        
+        h4{
+            line-height: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            color: $primary-color;
+            margin-bottom: 4px;
+        }
+        h5{
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    }
+}
